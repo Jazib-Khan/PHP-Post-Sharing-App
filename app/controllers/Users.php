@@ -102,6 +102,57 @@
             // Check for POST
             if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 // Process form
+                // Sanitize POST data
+                $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING); 
+
+                // Init data
+                if (!is_null($_POST)) {
+                    $data = [
+                        'email' => trim($_POST['email']),
+                        'password' => trim($_POST['password']),
+                        'email_err' => '',
+                        'password_err' => '',
+                    ];
+                }
+
+                // Validate Email
+                if(empty($data['email'])){
+                    $data['email_err'] = 'Please enter email';
+                }
+
+                // Validate Password
+                if(empty($data['password'])){
+                    $data['password_err'] = 'Please enter password';
+                } 
+
+                // Check for user/email
+                if($this->userModel->findUserByEmail($data['email'])){
+                    // User found
+                } else{
+                    // User not found
+                    $data['email_err'] = 'No user found';
+                }
+            
+
+                // Make sure errors are empty
+                if(empty($data['email_err']) && empty($data['password_err'])){
+                    // Validated
+                    // Check and set logged in user
+                    $loggedInUSer = $this->userModel->Login($data['email'], $data['password']);
+
+                    if($loggedInUSer) {
+                        // Create Session
+                        die('SUCCESS');
+                    } else {
+                        $data['password_err'] = 'Password incorrect';
+
+                        $this->view('users/login', $data);
+                    }
+                } else {
+                    // Load view with errors
+                    $this->view('users/login', $data);
+                }
+                
             } else {
                 // Init data
                 $data = [
@@ -113,39 +164,7 @@
 
                 // Load view
                 $this->view('users/login', $data);
-            }
-
-            // Sanitize POST data
-            $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING); 
-
-            // Init data
-            if (!is_null($_POST)) {
-                $data = [
-                    'email' => trim($_POST['email']),
-                    'password' => trim($_POST['password']),
-                    'email_err' => '',
-                    'password_err' => '',
-                ];
-            }
-
-            // Validate Email
-            if(empty($data['email'])){
-                $data['email_err'] = 'Please enter email';
-            }
-
-            // Validate Password
-            if(empty($data['password'])){
-                $data['password_err'] = 'Please enter password';
-            } 
-
-            // Make sure errors are empty
-            if(empty($data['email_err']) && empty($data['password_err'])){
-                //Validated
-                die("SUCCESS");
-            } else {
-                // Load view with errors
-                $this->view('users/login', $data);
-            }
-
+            }       
+            
         }
     }
