@@ -1,21 +1,28 @@
 # PHP-Post-Sharing-App
 Built with a custom MVC framework from scratch using pure PHP and incorporating OOP practises
 
-![image](https://github.com/Jazib-Khan/PHP-Post-Sharing-App/assets/57762628/25d5e0a9-b606-40fa-a3c6-3e8acc2ec833)
+![image](https://github.com/Jazib-Khan/PHP-Post-Sharing-App/assets/57762628/09c5221c-c658-479f-b946-7aa48626cf3e)
 
-![image](https://github.com/Jazib-Khan/PHP-Post-Sharing-App/assets/57762628/f70350fd-9acf-4439-81c8-cd94cebef030)
+![image](https://github.com/Jazib-Khan/PHP-Post-Sharing-App/assets/57762628/0c38f5ae-7d40-437a-951f-db9cec2653de)
+Full validation within auth system
 
-![image](https://github.com/Jazib-Khan/PHP-Post-Sharing-App/assets/57762628/a773bddb-2f4b-4eb2-82da-369513802685)
+![image](https://github.com/Jazib-Khan/PHP-Post-Sharing-App/assets/57762628/919c1bb6-069c-43a0-92a8-cb583bee69a1)
+Details added to db with hashing of the password
 
-![image](https://github.com/Jazib-Khan/PHP-Post-Sharing-App/assets/57762628/93a43eb6-e4c0-4982-9f46-a30c15a5bd36)
+![image](https://github.com/Jazib-Khan/PHP-Post-Sharing-App/assets/57762628/f5c10b77-0ffa-4d62-a573-e0229fff7b78)
+Posts retrieved from DB
 
-![image](https://github.com/Jazib-Khan/PHP-Post-Sharing-App/assets/57762628/dc02a981-8784-4411-a796-ff70215ba1ff)
+![image](https://github.com/Jazib-Khan/PHP-Post-Sharing-App/assets/57762628/ec2a4c5f-ca43-4606-b437-bb6f4fa5932d)
 
-![image](https://github.com/Jazib-Khan/PHP-Post-Sharing-App/assets/57762628/c7ce3b5d-10a4-4359-a689-813bb6203741)
+![image](https://github.com/Jazib-Khan/PHP-Post-Sharing-App/assets/57762628/be637c30-ddd2-4c53-a2b8-17edd53eec49)
 
-![image](https://github.com/Jazib-Khan/PHP-Post-Sharing-App/assets/57762628/a21218a8-f632-4377-bd97-7137684de01b)
+![image](https://github.com/Jazib-Khan/PHP-Post-Sharing-App/assets/57762628/5b94b289-db96-4d88-aab1-0d12d8c85152)
 
-![image](https://github.com/Jazib-Khan/PHP-Post-Sharing-App/assets/57762628/6f5417df-0961-43f8-a95d-57a255cb5ec7)
+![image](https://github.com/Jazib-Khan/PHP-Post-Sharing-App/assets/57762628/20e9c5ac-971b-4cb8-a2e9-ef04b73ef1cd)
+Only allows accounts that have made the post to edit and delete their created posts.
+
+
+
 
 
 
