@@ -1,5 +1,5 @@
 # PHP-Post-Sharing-App
-Built with a custom MVC framework from scratch using pure PHP and incorporating OOP practises
+Built a custom MVC framework from scratch using pure PHP and incorporating OOP practises.
 
 ![image](https://github.com/Jazib-Khan/PHP-Post-Sharing-App/assets/57762628/09c5221c-c658-479f-b946-7aa48626cf3e)
 
